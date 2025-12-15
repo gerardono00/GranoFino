@@ -1,5 +1,4 @@
-import { Router, Response } from "express";
-import { db } from "../db";
+import { type Response, type NextFunction, type Request, Router } from "express";import { db } from "../db";
 import { auth, AuthRequest } from "../middlewares/auth";
 import adminMiddleware from "../middlewares/admin.middleware";
 
