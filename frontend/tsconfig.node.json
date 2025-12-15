@@ -1,0 +1,36 @@
+// tsconfig.node.json
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    
+    // CAMBIO 1: Usar ES2022 para estabilidad (ESNext también funcionaría)
+    "target": "ES2022",
+    
+    // CAMBIO 2: Usar ES2022 para la librería
+    "lib": ["ES2022"],
+    
+    "module": "ESNext",
+    "types": ["node"],
+    "skipLibCheck": true,
+    
+    /* CONFIGURACIÓN CRÍTICA DE SEGURIDAD */
+    // CAMBIO 3: Añadir esta opción para entornos Linux/Ubuntu y evitar errores de ruta
+    "forceConsistentCasingInFileNames": true, 
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true
+  },
+  "include": ["vite.config.ts"]
+}

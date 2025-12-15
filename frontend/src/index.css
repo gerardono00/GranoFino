@@ -1,0 +1,1364 @@
+/* ======================================= */
+/* ESTILOS GLOBALES (Reemplaza las directivas @tailwind) */
+/* ======================================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    line-height: 1.5;
+}
+
+/* ======================================= */
+/* ESTILOS DEL LOGIN (Mapeo de clases) */
+/* ======================================= */
+
+/* 1. Contenedor principal de la página */
+.login-container {
+    background-color: #f3f4f6; /* bg-gray-50 */
+    min-height: 100vh;
+    padding: 3rem 1.5rem; /* py-12 px-6 */
+}
+
+/* 2. Contenedor central del formulario */
+.login-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+}
+
+/* Cabecera y Logo */
+.login-header {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 24rem; /* sm:max-w-sm */
+    text-align: center;
+}
+
+.login-logo {
+    display: flex;
+    justify-content: center;
+    font-size: 2.25rem; /* text-4xl */
+    margin-bottom: 1rem; /* mb-4 */
+    color: #1f2937; /* text-gray-900 */
+}
+
+.login-title {
+    margin-top: 1.5rem; /* mt-6 */
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 800; /* font-extrabold */
+    letter-spacing: -0.025em; /* tracking-tight */
+    color: #1f2937; /* text-gray-900 */
+}
+
+/* Formulario */
+.login-form-wrapper {
+    margin-top: 2rem; /* mt-8 */
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 28rem; /* sm:max-w-md */
+}
+
+.login-card {
+    background-color: #ffffff;
+    padding: 2rem 2.5rem; /* py-8 px-10 */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* shadow-2xl */
+    border-radius: 0.5rem; /* sm:rounded-lg */
+    border: 1px solid #f3f4f6; /* border border-gray-100 */
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* space-y-6 */
+}
+
+/* Etiquetas e Inputs */
+.form-label {
+    display: block;
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500; /* font-medium */
+    color: #374151; /* text-gray-700 */
+}
+
+.form-input-wrapper {
+    margin-top: 0.25rem; /* mt-1 */
+}
+
+.form-input {
+    appearance: none;
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem; /* px-3 py-2 */
+    border: 1px solid #d1d5db; /* border border-gray-300 */
+    border-radius: 0.375rem; /* rounded-md */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+    font-size: 0.875rem; /* sm:text-sm */
+    /* Estilos para el foco */
+    outline: none;
+}
+
+.form-input:focus {
+    border-color: #f97316; /* focus:border-orange-500 */
+    box-shadow: 0 0 0 1px #f97316; /* focus:ring-orange-500 */
+}
+
+/* Contraseña y Enlace Olvidado */
+.password-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.password-forgot {
+    font-size: 0.875rem; /* text-sm */
+}
+
+.link-forgot {
+    font-weight: 500; /* font-medium */
+    color: #ea580c; /* text-orange-600 */
+    text-decoration: none;
+}
+
+.link-forgot:hover {
+    color: #fb923c; /* hover:text-orange-500 */
+    text-decoration: underline;
+}
+
+/* Botón Primario */
+.btn-primary {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 1rem; /* py-2 px-4 */
+    border: 1px solid transparent; /* border border-transparent */
+    border-radius: 0.375rem; /* rounded-md */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500; /* font-medium */
+    color: #ffffff; /* text-white */
+    background-color: #f97316; /* bg-orange-600 */
+    cursor: pointer;
+    transition: background-color 150ms ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #ea580c; /* hover:bg-orange-700 */
+}
+
+.btn-primary:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #f97316; /* focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 */
+}
+
+/* Enlace a Registro */
+.register-link-wrapper {
+    margin-top: 1.5rem; /* mt-6 */
+}
+
+.register-text {
+    text-align: center;
+    font-size: 0.875rem; /* text-sm */
+    color: #4b5563; /* text-gray-600 */
+}
+
+.link-register {
+    font-weight: 500; /* font-medium */
+    color: #f97316; /* text-orange-600 */
+    text-decoration: none;
+}
+
+.link-register:hover {
+    color: #ea580c; /* hover:text-orange-500 */
+    text-decoration: underline;
+}
+/* ======================================= */
+/* ESTILOS DE HOME (Home.tsx) */
+/* ======================================= */
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+/* --- SECCIÓN HERO --- */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+@media (min-width: 768px) {
+    .hero-section {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #432818; /* Marrón oscuro del café */
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-description {
+    font-size: 1.15rem;
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+}
+
+.btn-hero-shop {
+    background-color: #f97316; /* Naranja */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.btn-hero-shop:hover {
+    background-color: #ea580c;
+}
+
+.hero-image-placeholder {
+    flex: 1;
+    min-height: 250px;
+    background-color: #e0e0e0; /* Gris placeholder */
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* --- SECCIÓN PRODUCTOS --- */
+
+.products-section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #432818;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.product-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-image-placeholder {
+    height: 200px;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #a0a0a0;
+}
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.product-no-image-icon {
+    color: #d1d5db;
+}
+
+.product-details {
+    padding: 1.25rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.product-description {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #f97316;
+}
+
+.btn-add-to-cart {
+    background-color: #432818; /* Marrón oscuro */
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.btn-add-to-cart:hover {
+    background-color: #6d4c41;
+}
+
+
+/* --- FOOTER Y REDES SOCIALES --- */
+
+.home-footer {
+    border-top: 1px solid #e5e7eb;
+    padding: 2rem 0 1rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.social-icon-link {
+    color: #4b5563; /* Gris para los íconos */
+    transition: color 0.2s;
+}
+.social-icon-link:hover {
+    color: #f97316; /* Naranja en hover */
+}
+
+.footer-copyright {
+    font-size: 0.85rem;
+    color: #9ca3af;
+}
+.home-page-container {
+    background-color: #f9fafb; /* bg-gray-50 */
+    min-height: 100vh;
+}
+
+.home-page-wrapper {
+    padding: 1.5rem; /* p-6 */
+    max-width: 80rem; /* max-w-7xl */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- HERO SECTION --- */
+
+.hero-section {
+    position: relative;
+    height: 75vh; /* h-[75vh] */
+    border-radius: 1.5rem; /* rounded-3xl */
+    overflow: hidden;
+    margin-bottom: 5rem; /* mb-20 */
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.05); /* scale-105 */
+}
+
+.hero-content {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* bg-black/60 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1.5rem; /* px-6 */
+}
+
+.hero-title {
+    font-size: 3.75rem; /* text-6xl */
+    line-height: 1;
+    font-weight: 800; /* font-extrabold */
+    color: white;
+    letter-spacing: -0.05em; /* tracking-tight */
+}
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 4.5rem; /* md:text-7xl */
+    }
+}
+
+.hero-subtitle {
+    font-size: 1.25rem; /* text-xl */
+    color: #e5e7eb; /* text-gray-200 */
+    margin-top: 1.5rem; /* mt-6 */
+    max-width: 42rem; /* max-w-2xl */
+    line-height: 1.625; /* leading-relaxed */
+}
+@media (min-width: 768px) {
+    .hero-subtitle {
+        font-size: 1.5rem; /* md:text-2xl */
+    }
+}
+
+.hero-highlight {
+    color: #fb923c; /* text-orange-400 */
+    font-weight: 600; /* font-semibold */
+}
+
+/* --- PRODUCT SECTION --- */
+
+.products-section {
+    max-width: 72rem; /* max-w-6xl */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.products-title {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700; /* font-bold */
+    margin-bottom: 3rem; /* mb-12 */
+    text-align: center;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr)); /* grid-cols-1 */
+    gap: 2rem; /* gap-8 */
+}
+@media (min-width: 640px) {
+    .products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* sm:grid-cols-2 */
+    }
+}
+@media (min-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)); /* md:grid-cols-3 */
+    }
+}
+
+/* Product Card */
+.product-card {
+    background-color: white;
+    border-radius: 1rem; /* rounded-2xl */
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* shadow */
+    transition: box-shadow 150ms ease-in-out;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* hover:shadow-lg */
+}
+
+.product-image {
+    height: 11rem; /* h-44 */
+    width: 100%;
+    object-fit: cover;
+}
+
+.product-details {
+    padding: 1.25rem; /* p-5 */
+}
+
+.product-name {
+    font-weight: 600; /* font-semibold */
+    font-size: 1.125rem; /* text-lg */
+    margin-bottom: 0.25rem; /* mb-1 */
+}
+
+.product-description {
+    color: #4b5563; /* text-gray-600 */
+    font-size: 0.875rem; /* text-sm */
+    margin-bottom: 1rem; /* mb-4 */
+    /* Simulación de line-clamp-2 */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-price {
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 700; /* font-bold */
+    color: #f97316; /* text-orange-500 */
+}
+
+.btn-add-to-cart {
+    background-color: #f97316; /* bg-orange-500 */
+    color: white;
+    padding: 0.5rem 1rem; /* px-4 py-2 */
+    border-radius: 0.5rem; /* rounded-lg */
+    font-size: 0.875rem; /* text-sm */
+    transition: opacity 150ms ease-in-out;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-add-to-cart:hover {
+    opacity: 0.9;
+}
+
+/* --- MAP SECTION --- */
+
+.map-section {
+    margin-top: 4rem; /* mt-16 */
+}
+
+.map-title {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 600; /* font-semibold */
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+/* ======================================= */
+/* ESTILOS DEL NAVBAR (Navbar.tsx) */
+/* ======================================= */
+
+.navbar-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    /* Manteniendo el color naranja que ya funcionaba */
+    background-color: #f97316; /* bg-orange-500 */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); /* shadow-xl */
+}
+
+.navbar-nav {
+    max-width: 80rem; /* max-w-7xl */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem; /* px-6 */
+    padding-right: 1.5rem; /* px-6 */
+    height: 4rem; /* h-16 */
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* grid-cols-3 */
+    align-items: center;
+}
+
+/* --- SECCIÓN IZQUIERDA (CARRITO) --- */
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-cart-link {
+    position: relative;
+    color: white;
+    transition: opacity 150ms ease-in-out;
+    text-decoration: none;
+}
+
+.navbar-cart-link:hover {
+    opacity: 0.9;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -0.5rem; /* -top-2 */
+    right: -0.75rem; /* -right-3 */
+    background-color: #b91c1c; /* bg-red-700 */
+    color: white;
+    font-size: 0.75rem; /* text-xs */
+    font-weight: 700; /* font-bold */
+    border-radius: 9999px; /* rounded-full */
+    width: 1.25rem; /* w-5 */
+    height: 1.25rem; /* h-5 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 2px #f97316; /* ring-2 ring-orange-500 */
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; /* animate-pulse */
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .5;
+    }
+}
+
+/* --- SECCIÓN CENTRO (LOGO y Link HOME) --- */
+
+.navbar-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; /* gap-4 */
+}
+
+.navbar-logo {
+    color: white;
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 800; /* font-extrabold */
+    letter-spacing: 0.025em; /* tracking-wide */
+    transition: opacity 150ms ease-in-out;
+    text-decoration: none;
+}
+
+.navbar-logo:hover {
+    opacity: 0.9;
+}
+
+.navbar-link-home {
+    display: none; /* hidden */
+    color: #fed7aa; /* text-orange-100 */
+    font-size: 1rem; /* text-base */
+    font-weight: 500; /* font-medium */
+    transition: color 200ms ease-in-out;
+    text-decoration: none;
+}
+
+.navbar-link-home:hover {
+    color: white;
+}
+
+@media (min-width: 640px) {
+    .navbar-link-home {
+        display: block; /* sm:block */
+    }
+}
+
+/* --- SECCIÓN DERECHA (BOTONES) --- */
+
+.navbar-right {
+    display: flex;
+    justify-content: flex-end; /* justify-end */
+    gap: 0.75rem; /* gap-3 */
+}
+
+.btn-login,
+.btn-register {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem; /* gap-1 */
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 600; /* font-semibold */
+    border-radius: 0.5rem; /* rounded-lg */
+    padding: 0.375rem 0.75rem; /* px-3 py-1.5 */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06); /* shadow-md/lg */
+    transition: transform 150ms ease-in-out, background-color 150ms ease-in-out;
+    text-decoration: none;
+}
+
+.btn-login {
+    background-color: white;
+    color: #ea580c; /* text-orange-600 */
+}
+
+.btn-login:hover {
+    background-color: #fff7ed; /* hover:bg-orange-100 */
+    transform: scale(1.05);
+}
+
+.btn-register {
+    display: none; /* hidden */
+    background-color: #1f2937; /* bg-gray-800 */
+    color: white;
+    padding: 0.5rem 1rem; /* px-4 py-2 (un poco más grande) */
+}
+
+.btn-register:hover {
+    background-color: #374151; /* hover:bg-gray-700 */
+    transform: scale(1.05);
+}
+
+@media (min-width: 640px) {
+    .btn-register {
+        display: flex; /* sm:flex */
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); /* shadow-lg */
+    }
+}
+.btn-admin-dashboard {
+    color: #ffd700; /* Color dorado para resaltar */
+    transition: opacity 150ms ease-in-out;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.btn-admin-dashboard:hover {
+    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.admin-cart-spacer {
+    width: 0.75rem; /* Espacio entre el Dashboard y el Carrito */
+}
+
+.btn-logout {
+    /* Estilo similar a un botón principal pero en rojo/naranja */
+    background-color: #fca5a5; /* bg-red-300 suave */
+    color: #b91c1c; /* text-red-700 */
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 150ms ease-in-out;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-logout:hover {
+    background-color: #fecaca; /* hover:bg-red-200 */
+}
+
+/* ⚠️ IMPORTANTE: Modificar el navbar-left para que use espacio si es admin */
+/* Reemplaza o modifica la regla .navbar-left si es necesario */
+.navbar-left {
+    display: flex;
+    align-items: center;
+    /* Ajuste para que los items no se peguen si hay más de uno */
+    gap: 0.5rem; 
+}
+/* ======================================= */
+/* ESTILOS DEL ADMIN LAYOUT (AdminLayout.tsx) */
+/* ======================================= */
+
+.admin-layout-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- SIDEBAR --- */
+.admin-sidebar {
+    width: 16rem; /* w-64 */
+    background-color: #111827; /* bg-gray-900 */
+    color: white;
+    padding: 1.5rem; /* p-6 */
+    flex-shrink: 0; 
+}
+
+.admin-sidebar-title {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 700; /* font-bold */
+    margin-bottom: 1.5rem; /* mb-6 */
+}
+
+.admin-sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* gap-4 */
+}
+
+.admin-sidebar-link {
+    color: #f3f4f6; /* text-gray-100 */
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    transition: color 150ms ease-in-out, background-color 150ms ease-in-out;
+    text-decoration: none;
+    display: block;
+}
+
+.admin-sidebar-link:hover {
+    color: #fb923c; /* hover:text-orange-400 */
+    background-color: #1f2937; 
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+.admin-main-content {
+    flex-grow: 1; /* flex-1 */
+    background-color: #f3f4f6; /* bg-gray-100 */
+    padding: 1.5rem; /* p-6 */
+}
+.loading-message, .error-message {
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    font-weight: 500;
+}
+.loading-message {
+    background-color: #f0f4f8; /* Gris azulado claro */
+    color: #4b5563;
+}
+.error-message {
+    background-color: #fee2e2; /* Rojo claro */
+    color: #dc2626;
+    border: 1px solid #dc2626;
+}
+/* ======================================= */
+/* REFINAMIENTO DE ESTILOS DEL CARRITO (Cart.tsx) */
+/* ======================================= */
+
+.cart-container {
+    max-width: 1000px; /* Ancho un poco más grande */
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.cart-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f2937;
+    border-bottom: 2px solid #f97316;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+.cart-title:after {
+    display: block;
+    content: "";
+    width: 100%;
+    margin-top: 0.25rem;
+}
+
+
+/* --- LISTA DE ÍTEMS (REFINADA) --- */
+
+.cart-item-card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-left: 5px solid #f97316; 
+    transition: transform 0.2s;
+}
+
+.cart-item-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item-info {
+    width: 40%;
+}
+.cart-item-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+.cart-item-unit-price {
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.cart-item-actions-group {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.cart-item-price-total {
+    font-weight: 700;
+    color: #ea580c; /* Naranja oscuro */
+    min-width: 60px; /* Asegura espacio para el precio */
+    text-align: right;
+}
+
+/* Control de Cantidad */
+.quantity-control {
+    display: flex;
+    align-items: center;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.btn-quantity-remove, .btn-quantity-add {
+    background: #f3f4f6;
+    color: #1f2937;
+    padding: 0.5rem 0.7rem;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn-quantity-remove:hover, .btn-quantity-add:hover {
+    background: #e5e7eb;
+}
+.quantity-display {
+    padding: 0 0.8rem;
+    font-weight: 500;
+    min-width: 30px;
+    text-align: center;
+}
+
+/* Botón de Eliminar Ítem Completo (Usando Trash2) */
+.btn-item-delete {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    transition: color 0.15s;
+    padding: 0.5rem;
+}
+.btn-item-delete:hover {
+    color: #b91c1c; /* Rojo intenso */
+}
+
+/* Botón de Vaciar Carrito (al final de la lista de ítems) */
+.btn-clear-cart-bottom {
+    display: block;
+    width: fit-content;
+    margin-top: 1rem;
+    background: none;
+    border: none;
+    color: #b91c1c; /* Rojo de advertencia */
+    padding: 0.5rem 0;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: text-decoration 0.15s;
+}
+.btn-clear-cart-bottom:hover {
+    text-decoration: underline;
+}
+
+
+/* --- CARRITO VACÍO --- */
+.cart-empty-container {
+    /* Mantener estilos de carrito vacío */
+}
+
+/* --- RESUMEN DEL PEDIDO (Sidebar) --- */
+.cart-summary-card {
+    /* Mantener estilos de resumen */
+}
+
+/* Asegurar el responsive del grid */
+@media (max-width: 1023px) {
+    .cart-content-wrapper {
+        grid-template-columns: 1fr; /* Columna única en móvil */
+    }
+}
+.btn-checkout {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    /* 🚨 ESTILOS NARANJAS CLAVE 🚨 */
+    background-color: #f97316; /* bg-orange-500 */
+    color: white;
+    /* ------------------------------ */
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: opacity 0.15s, transform 0.15s;
+    text-decoration: none;
+    box-shadow: 0 4px 6px -1px rgba(249, 115, 22, 0.3); /* Sombra suave naranja */
+}
+.btn-checkout:hover {
+    opacity: 0.9;
+    transform: translateY(-1px); /* Efecto leve de elevación */
+}
+/* ======================================= */
+/* ESTILOS DEL CHECKOUT (Checkout.tsx) */
+/* ======================================= */
+
+.checkout-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alineamos al inicio para que no esté pegado al fondo */
+    min-height: calc(100vh - 4rem); /* Altura de la vista menos la altura del navbar */
+    padding: 3rem 1rem;
+    background-color: #f3f4f6; /* Fondo gris claro */
+}
+
+.checkout-card {
+    width: 100%;
+    max-width: 450px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.checkout-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1f2937;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Resumen de Total --- */
+.checkout-total-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff7ed; /* Naranja muy claro */
+    border: 1px solid #f97316;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.checkout-total-summary span {
+    font-weight: 500;
+    color: #4b5563;
+}
+
+.checkout-total-amount {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #f97316; /* Naranja */
+}
+
+/* --- Opciones de Pago --- */
+.payment-options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.payment-instructions {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.paypal-button-wrapper {
+    /* Contenedor para que el botón de PayPal se ajuste */
+    width: 100%; 
+}
+
+/* Separador "O" */
+.payment-separator {
+    text-align: center;
+    color: #6b7280;
+    font-weight: 500;
+    position: relative;
+    margin: 1rem 0;
+}
+.payment-separator::before,
+.payment-separator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background: #d1d5db;
+}
+.payment-separator::before {
+    left: 0;
+}
+.payment-separator::after {
+    right: 0;
+}
+
+
+/* Botón de OXXO */
+.btn-oxxo-pay {
+    /* Color característico de OXXO/Naranja */
+    background-color: #e62020; /* Rojo/Naranja de Oxxo */
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: background-color 0.15s, transform 0.1s;
+    box-shadow: 0 4px 6px -1px rgba(230, 32, 32, 0.4);
+}
+.btn-oxxo-pay:hover {
+    background-color: #cc1c1c;
+    transform: translateY(-1px);
+}
+
+.security-notice {
+    font-size: 0.8rem;
+    text-align: center;
+    color: #6b7280;
+    margin-top: 1.5rem;
+}
+
+/* --- ESTILOS DE CHECKOUT VACÍO --- */
+.checkout-empty-container {
+    /* Reutiliza los estilos del carrito vacío */
+    text-align: center;
+    padding: 4rem 1rem;
+    max-width: 400px;
+    margin: 4rem auto;
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+}
+
+.checkout-empty-message {
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+}
+/* ======================================= */
+/* ESTILOS DE GESTIÓN DE PRODUCTOS (CRUD) */
+/* ======================================= */
+
+.admin-content-page {
+    /* Contenedor general de cualquier página de admin */
+    padding: 1rem;
+}
+
+.dashboard-header-title {
+    /* Reutilizado del dashboard */
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.header-icon {
+    margin-right: 0.5rem;
+    color: #f97316;
+}
+
+/* --- ESTILOS DEL FORMULARIO DE ADMIN --- */
+.form-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+.form-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1rem;
+}
+
+.admin-form-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .admin-form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+.form-group input, .form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #f97316;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+}
+
+.span-full-row {
+    grid-column: 1 / -1; /* Ocupa el ancho completo en el grid */
+}
+
+.input-icon {
+    margin-right: 0.3rem;
+    color: #9ca3af;
+}
+
+/* Botones del Formulario */
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-primary-admin, .btn-secondary-admin {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
+}
+
+.btn-primary-admin {
+    background-color: #f97316; /* Naranja principal */
+    color: white;
+}
+.btn-primary-admin:hover {
+    background-color: #ea580c;
+}
+
+.btn-secondary-admin {
+    background-color: #e5e7eb; /* Gris claro */
+    color: #4b5563;
+}
+.btn-secondary-admin:hover {
+    background-color: #d1d5db;
+}
+
+/* --- ESTILOS DE LA TABLA DE ADMIN --- */
+.section-title-admin {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.admin-table-container {
+    overflow-x: auto; /* Para tablas en móviles */
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    min-width: 700px; /* Ancho mínimo para evitar compresión excesiva */
+}
+
+.admin-table th, .admin-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-table th {
+    background-color: #f9fafb;
+    color: #4b5563;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.admin-table td {
+    color: #1f2937;
+    font-size: 0.95rem;
+}
+
+.admin-table tbody tr:last-child td {
+    border-bottom: none;
+}
+.admin-table tbody tr:hover {
+    background-color: #f3f4f6;
+}
+
+.row-editing {
+    background-color: #fffbe6 !important; /* Resaltar la fila que se está editando */
+    border-left: 3px solid #fcd34d;
+}
+
+.description-cell {
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.actions-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-action-edit, .btn-action-delete {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-action-edit {
+    background-color: #fff7ed;
+    color: #f97316;
+}
+.btn-action-edit:hover {
+    background-color: #fcd34d;
+}
+
+.btn-action-delete {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+.btn-action-delete:hover {
+    background-color: #f87171;
+    color: white;
+}
