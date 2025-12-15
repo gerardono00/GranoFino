@@ -1,13 +1,18 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.db = void 0;
-const promise_1 = __importDefault(require("mysql2/promise"));
-exports.db = promise_1.default.createPool({
-    host: "localhost",
-    user: "root",
-    password: "admin",
-    database: "el_grano_fino",
+const pg_1 = require("pg");
+const pool = new pg_1.Pool({
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+        rejectUnauthorized: false
+    }
 });
+pool.connect()
+    .then((client) => {
+    console.log('PostgreSQL Pool conectado exitosamente a la base de datos.');
+    client.release();
+})
+    .catch((err) => {
+    console.error('Error al conectar el Pool de PostgreSQL:', err.message);
+});
+exports.default = pool;
